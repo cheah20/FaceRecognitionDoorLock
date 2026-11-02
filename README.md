@@ -9,7 +9,39 @@
 
 My Diploma final year project. A Raspberry Pi 4 watches the front door through a Pi camera, recognises registered faces and opens a 12V solenoid lock through a relay. Unknown faces are refused, photographed and logged. A web dashboard on the Pi shows the live camera, the door state and the access log.
 
-![Hardware](docs/hardware.gif)
+<table>
+  <tr>
+    <td width="50%"><img src="docs/hardware.gif" alt="Hardware"></td>
+    <td width="50%"><img src="docs/screenshots/dashboard-top.png" alt="Live Monitor"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Hardware</b></td>
+    <td align="center"><b>Live Monitor</b></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="33%"><img src="docs/hardware-overview.jpg" alt="Overview"></td>
+    <td width="33%"><img src="docs/hardware-board.jpg" alt="Board and relay"></td>
+    <td width="33%"><img src="docs/hardware-camera.jpg" alt="Camera"></td>
+  </tr>
+  <tr>
+    <td align="center">Overview</td>
+    <td align="center">Board and relay</td>
+    <td align="center">Pi camera</td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/people.png" alt="Face Database"></td>
+    <td><img src="docs/screenshots/logs.png" alt="Access Log"></td>
+    <td><img src="docs/screenshots/settings.png" alt="Settings"></td>
+  </tr>
+  <tr>
+    <td align="center">Face Database</td>
+    <td align="center">Access Log</td>
+    <td align="center">Settings</td>
+  </tr>
+</table>
 
 ## Final Year Project
 
@@ -30,10 +62,6 @@ My Diploma final year project. A Raspberry Pi 4 watches the front door through a
 | 12V solenoid door lock + 12V adapter | The lock itself |
 | Green and red LEDs + 220Ω resistors | Access granted / denied |
 | Active buzzer | Short beep on open, long beep on deny |
-
-| Overview | Board and relay | Camera |
-|---|---|---|
-| ![Overview](docs/hardware-overview.jpg) | ![Board](docs/hardware-board.jpg) | ![Camera](docs/hardware-camera.jpg) |
 
 ## Wiring
 
@@ -68,14 +96,6 @@ The relay board is active low. The 12V supply goes through the relay COM and NO 
 | Settings | Unlock time, match threshold, cooldown and photos per person. Wiring table |
 
 ![Live Monitor](docs/screenshots/dashboard.png)
-
-| Face Database | Access Log |
-|---|---|
-| ![Face Database](docs/screenshots/people.png) | ![Access Log](docs/screenshots/logs.png) |
-
-| Settings | Login |
-|---|---|
-| ![Settings](docs/screenshots/settings.png) | ![Login](docs/screenshots/login.png) |
 
 ## Getting Started
 
