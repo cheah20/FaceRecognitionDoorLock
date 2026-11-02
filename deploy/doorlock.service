@@ -1,0 +1,15 @@
+# copy to /etc/systemd/system/ then: sudo systemctl enable --now doorlock
+[Unit]
+Description=Face recognition door lock
+After=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/FaceRecognitionDoorLock
+Environment=DOORLOCK_PASSWORD=admin
+Environment=DOORLOCK_SECRET=change-me
+ExecStart=/home/pi/FaceRecognitionDoorLock/.venv/bin/python app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

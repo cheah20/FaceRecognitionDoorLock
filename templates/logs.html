@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Access log{% endblock %}
+{% block content %}
+<section class="card">
+  <div class="card-head">
+    <div class="filters">
+      <a href="{{ url_for('logs') }}" class="{{ 'on' if not kind }}">All</a>
+      <a href="{{ url_for('logs', kind='granted') }}" class="{{ 'on' if kind == 'granted' }}">Opened</a>
+      <a href="{{ url_for('logs', kind='denied') }}" class="{{ 'on' if kind == 'denied' }}">Denied</a>
+      <a href="{{ url_for('logs', kind='remote') }}" class="{{ 'on' if kind == 'remote' }}">Remote</a>
+    </div>
+    <a class="btn small" href="{{ url_for('logs_csv') }}">Export CSV</a>
+  </div>
+  {% include "_events.html" %}
+</section>
+{% endblock %}

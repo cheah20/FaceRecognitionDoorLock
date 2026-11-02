@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<div class="login">
+  <div class="login-card">
+    <div class="titlebar"><span class="title-icon"></span>DoorLock Pi - Login<span class="title-btns"><i>×</i></span></div>
+    <div class="login-body">
+    <h1>FACE RECOGNITION<br>DOOR LOCK SYSTEM</h1>
+    <p class="muted">Face recognition door lock on a Raspberry Pi 4.</p>
+    <form method="post">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autofocus required>
+      <button class="btn primary wide" type="submit">Log In</button>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

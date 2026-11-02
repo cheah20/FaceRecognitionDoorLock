@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="grid-main">
+  <section class="card camera">
+    <div class="card-head">
+      <h2>Front door camera</h2>
+      <span class="tag" id="camSource">connecting</span>
+    </div>
+    <div class="feed">
+      <img src="{{ url_for('video_feed') }}" alt="Live camera">
+      <div class="feed-msg idle" id="lastMsg">Waiting for a face</div>
+    </div>
+    <div class="enrol" id="enrol" hidden>
+      <span id="enrolText">Taking photos</span>
+      <div class="bar"><div id="enrolBar"></div></div>
+    </div>
+  </section>
+
+  <aside class="side">
+    <section class="card panel">
+      <div class="card-head"><h2>Door</h2><span class="tag" id="mode"></span></div>
+      <div class="lock" id="lock">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="21" width="28" height="21" rx="4"/><path id="shackle" d="M16 21v-6a8 8 0 0 1 16 0v6"/></svg>
+        <div><strong id="lockText">Locked</strong><span id="lockSub">Relay off</span></div>
+      </div>
+      <!-- gpio lights -->
+      <div class="leds">
+        <div class="led" data-pin="relay"><i></i><b>Relay</b><code>GPIO17</code></div>
+        <div class="led green" data-pin="green_led"><i></i><b>Green</b><code>GPIO22</code></div>
+        <div class="led red" data-pin="red_led"><i></i><b>Red</b><code>GPIO23</code></div>
+        <div class="led amber" data-pin="buzzer"><i></i><b>Buzzer</b><code>GPIO27</code></div>
+      </div>
+      <button class="btn primary wide" id="unlockBtn" type="button">Unlock door</button>
+    </section>
+
+    <section class="card counts-box">
+      <div class="card-head"><h2>Today</h2></div>
+      <div class="counts">
+        <div><b id="cGranted">0</b><span>Opened</span></div>
+        <div><b id="cDenied">0</b><span>Denied</span></div>
+        <div><b id="cRemote">0</b><span>Remote</span></div>
+      </div>
+    </section>
+  </aside>
+</div>
+
+<section class="card">
+  <div class="card-head"><h2>Recent activity</h2><a href="{{ url_for('logs') }}">Full log</a></div>
+  {% include "_events.html" %}
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='app.js') }}"></script>{% endblock %}

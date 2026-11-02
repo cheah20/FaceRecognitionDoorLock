@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<div class="grid-two">
+  <section class="card">
+    <div class="card-head"><h2>Door settings</h2></div>
+    <form method="post" class="form">
+      <label for="unlock_seconds">Unlock time (seconds)</label>
+      <input id="unlock_seconds" name="unlock_seconds" type="number" min="1" max="30" value="{{ settings.unlock_seconds }}">
+      <label for="match_threshold">Match threshold</label>
+      <input id="match_threshold" name="match_threshold" type="number" min="20" max="150" value="{{ settings.match_threshold }}">
+      <p class="muted small">Lower is stricter. Around 60 to 80 works well with a Pi camera in normal room light.</p>
+      <label for="cooldown_seconds">Cooldown (seconds)</label>
+      <input id="cooldown_seconds" name="cooldown_seconds" type="number" min="1" max="120" value="{{ settings.cooldown_seconds }}">
+      <p class="muted small">How long to wait before acting on the same face again.</p>
+      <label for="photos_per_person">Photos per person</label>
+      <input id="photos_per_person" name="photos_per_person" type="number" min="5" max="60" value="{{ settings.photos_per_person }}">
+      <button class="btn primary" type="submit">Save settings</button>
+    </form>
+  </section>
+  <section class="card">
+    <div class="card-head"><h2>Wiring</h2></div>
+    <table class="table">
+      <thead><tr><th>Part</th><th>GPIO (BCM)</th><th>Physical pin</th></tr></thead>
+      <tbody>
+        <tr><td>Relay for the 12V solenoid lock</td><td class="mono">GPIO{{ pins.relay }}</td><td class="mono">11</td></tr>
+        <tr><td>Green LED</td><td class="mono">GPIO{{ pins.green_led }}</td><td class="mono">15</td></tr>
+        <tr><td>Red LED</td><td class="mono">GPIO{{ pins.red_led }}</td><td class="mono">16</td></tr>
+        <tr><td>Buzzer</td><td class="mono">GPIO{{ pins.buzzer }}</td><td class="mono">13</td></tr>
+        <tr><td>Pi camera</td><td colspan="2">CSI ribbon port</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+{% endblock %}

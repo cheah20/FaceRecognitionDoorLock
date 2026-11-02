@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Door Lock{% endblock %} · Face Recognition Door Lock</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% if page %}
+<div class="window">
+  <div class="titlebar">
+    <span class="title-icon"></span>Face Recognition Door Lock - DoorLock Pi
+    <span class="title-btns"><i>_</i><i>□</i><a href="{{ url_for('logout') }}" title="Log out">×</a></span>
+  </div>
+  <h1 class="app-title">FACE RECOGNITION DOOR LOCK SYSTEM</h1>
+  <nav class="toolbar">
+    <a href="{{ url_for('dashboard') }}" class="{{ 'on' if page == 'dashboard' }}">Live Monitor</a>
+    <a href="{{ url_for('people') }}" class="{{ 'on' if page == 'people' }}">Face Database</a>
+    <a href="{{ url_for('logs') }}" class="{{ 'on' if page == 'logs' }}">Access Log</a>
+    <a href="{{ url_for('settings') }}" class="{{ 'on' if page == 'settings' }}">Settings</a>
+    <a href="{{ url_for('logout') }}" class="right">Log Out</a>
+  </nav>
+{% endif %}
+<main class="wrap">
+  {% for msg in get_flashed_messages() %}<div class="flash">{{ msg }}</div>{% endfor %}
+  {% block content %}{% endblock %}
+</main>
+{% if page %}<div class="statusbar"><span>Raspberry Pi 4 · Raspberry Pi OS</span><span id="sbCam">Camera: {{ cam }}</span><span id="sbMode">GPIO: {{ gpio }}</span></div></div>{% endif %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

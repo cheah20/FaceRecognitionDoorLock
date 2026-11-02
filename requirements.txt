@@ -1,0 +1,4 @@
+flask>=2.3
+opencv-contrib-python-headless>=4.8,<5
+numpy
+gpiozero

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}People{% endblock %}
+{% block content %}
+<div class="grid-two">
+  <section class="card">
+    <div class="card-head"><h2>Add a person</h2></div>
+    <form method="post" enctype="multipart/form-data" class="form">
+      <label for="name">Name</label>
+      <input id="name" name="name" required placeholder="e.g. Ali bin Ahmad">
+      <label for="role">Role</label>
+      <select id="role" name="role"><option>Resident</option><option>Family</option><option>Staff</option><option>Guest</option></select>
+      <label for="photos">Photos (optional)</label>
+      <input id="photos" name="photos" type="file" accept="image/*" multiple>
+      <p class="muted small">Leave photos empty to take them with the door camera instead. Clear, front facing photos work best.</p>
+      <button class="btn primary" type="submit">Add person</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>Registered people</h2><span class="tag">{{ people|length }}</span></div>
+    <table class="table">
+      <thead><tr><th>Name</th><th>Role</th><th class="num">Photos</th><th>Last opened</th><th></th></tr></thead>
+      <tbody>
+      {% for p in people %}
+        <tr>
+          <td><b>{{ p.name }}</b></td>
+          <td>{{ p.role }}</td>
+          <td class="num mono">{{ p.photos }}</td>
+          <td class="mono">{{ p.last_seen or '—' }}</td>
+          <td class="actions">
+            <form method="post" action="{{ url_for('retake', pid=p.id) }}"><button class="btn small">Retake photos</button></form>
+            <form method="post" action="{{ url_for('delete_person', pid=p.id) }}" onsubmit="return confirm('Remove {{ p.name }}? Their photos will be deleted.')"><button class="btn small danger">Remove</button></form>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5" class="empty">Nobody registered yet. Add the first person on the left.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
+{% endblock %}

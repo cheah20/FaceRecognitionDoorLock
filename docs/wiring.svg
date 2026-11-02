@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" font-family="Arial, Helvetica, sans-serif">
+  <rect width="960" height="640" fill="#ffffff"/>
+
+  <!-- Raspberry Pi 4 -->
+  <rect x="40" y="170" width="450" height="300" rx="14" fill="#2f8f4e" stroke="#1d6b36" stroke-width="2"/>
+  <circle cx="62" cy="192" r="7" fill="#d9c27a"/><circle cx="468" cy="192" r="7" fill="#d9c27a"/>
+  <circle cx="62" cy="448" r="7" fill="#d9c27a"/><circle cx="468" cy="448" r="7" fill="#d9c27a"/>
+  <rect x="62" y="178" width="370" height="30" fill="#1b1b1b"/>
+  <g fill="#c9a227">
+    <!-- 40 pin header, top row even pins, bottom row odd pins -->
+    <circle cx="70" cy="185" r="3.4"/><circle cx="88" cy="185" r="3.4"/><circle cx="106" cy="185" r="3.4"/><circle cx="124" cy="185" r="3.4"/><circle cx="142" cy="185" r="3.4"/><circle cx="160" cy="185" r="3.4"/><circle cx="178" cy="185" r="3.4"/><circle cx="196" cy="185" r="3.4"/><circle cx="214" cy="185" r="3.4"/><circle cx="232" cy="185" r="3.4"/><circle cx="250" cy="185" r="3.4"/><circle cx="268" cy="185" r="3.4"/><circle cx="286" cy="185" r="3.4"/><circle cx="304" cy="185" r="3.4"/><circle cx="322" cy="185" r="3.4"/><circle cx="340" cy="185" r="3.4"/><circle cx="358" cy="185" r="3.4"/><circle cx="376" cy="185" r="3.4"/><circle cx="394" cy="185" r="3.4"/><circle cx="412" cy="185" r="3.4"/>
+    <circle cx="70" cy="200" r="3.4"/><circle cx="88" cy="200" r="3.4"/><circle cx="106" cy="200" r="3.4"/><circle cx="124" cy="200" r="3.4"/><circle cx="142" cy="200" r="3.4"/><circle cx="160" cy="200" r="3.4"/><circle cx="178" cy="200" r="3.4"/><circle cx="196" cy="200" r="3.4"/><circle cx="214" cy="200" r="3.4"/><circle cx="232" cy="200" r="3.4"/><circle cx="250" cy="200" r="3.4"/><circle cx="268" cy="200" r="3.4"/><circle cx="286" cy="200" r="3.4"/><circle cx="304" cy="200" r="3.4"/><circle cx="322" cy="200" r="3.4"/><circle cx="340" cy="200" r="3.4"/><circle cx="358" cy="200" r="3.4"/><circle cx="376" cy="200" r="3.4"/><circle cx="394" cy="200" r="3.4"/><circle cx="412" cy="200" r="3.4"/>
+  </g>
+  <text x="246" y="222" text-anchor="middle" fill="#e8f5ec" font-size="11">GPIO</text>
+  <!-- chips and ports -->
+  <rect x="190" y="268" width="80" height="80" rx="4" fill="#c9cdd1" stroke="#8a9096"/>
+  <rect x="290" y="282" width="56" height="44" rx="3" fill="#202020"/>
+  <rect x="420" y="250" width="70" height="56" fill="#b8bcc0" stroke="#7d8287"/><text x="455" y="282" text-anchor="middle" font-size="10" fill="#333">USB</text>
+  <rect x="420" y="320" width="70" height="56" fill="#b8bcc0" stroke="#7d8287"/><text x="455" y="352" text-anchor="middle" font-size="10" fill="#333">USB</text>
+  <rect x="420" y="390" width="70" height="66" fill="#c7ccd1" stroke="#7d8287"/><text x="455" y="426" text-anchor="middle" font-size="10" fill="#333">LAN</text>
+  <rect x="110" y="438" width="36" height="22" fill="#b8bcc0"/><rect x="160" y="442" width="22" height="16" fill="#b8bcc0"/><rect x="196" y="442" width="22" height="16" fill="#b8bcc0"/>
+  <text x="128" y="476" text-anchor="middle" font-size="10" fill="#555">USB-C 5V</text>
+  <text x="207" y="476" text-anchor="middle" font-size="10" fill="#555">micro HDMI</text>
+  <rect x="248" y="400" width="80" height="14" fill="#f2f2f2" stroke="#333"/><text x="288" y="394" text-anchor="middle" font-size="10" fill="#e8f5ec">CSI (CAMERA)</text>
+  <text x="120" y="300" fill="#e8f5ec" font-size="15" font-weight="bold">Raspberry Pi 4</text>
+  <text x="120" y="318" fill="#e8f5ec" font-size="11">Model B</text>
+
+  <!-- camera on its ribbon -->
+  <path d="M258 414 L258 560 L318 560 L318 414 Z" fill="#e8e8e8" stroke="#9aa0a6"/>
+  <rect x="244" y="560" width="88" height="62" rx="4" fill="#2f7f45" stroke="#1d5c30"/>
+  <circle cx="288" cy="591" r="22" fill="#141414"/><circle cx="288" cy="591" r="12" fill="#2a3b55"/><circle cx="283" cy="586" r="4" fill="#8fb3e0"/>
+  <text x="345" y="585" font-size="13" fill="#222">Pi camera (OV5647)</text>
+  <text x="345" y="602" font-size="11" fill="#666">CSI ribbon cable</text>
+
+  <!-- relay module -->
+  <rect x="430" y="28" width="210" height="96" rx="6" fill="#2a6fb6" stroke="#1b4f86" stroke-width="2"/>
+  <rect x="500" y="40" width="86" height="72" rx="3" fill="#3b8de0" stroke="#1b4f86"/>
+  <text x="543" y="70" text-anchor="middle" font-size="9" fill="#fff">SRD-05VDC</text><text x="543" y="84" text-anchor="middle" font-size="9" fill="#fff">10A 250VAC</text>
+  <g fill="#1b1b1b"><rect x="436" y="52" width="16" height="10"/><rect x="436" y="70" width="16" height="10"/><rect x="436" y="88" width="16" height="10"/></g>
+  <text x="458" y="61" font-size="9" fill="#fff">VCC</text><text x="458" y="79" font-size="9" fill="#fff">GND</text><text x="458" y="97" font-size="9" fill="#fff">IN</text>
+  <g><circle cx="618" cy="50" r="9" fill="#3fbf3f" stroke="#1d6b1d"/><circle cx="618" cy="76" r="9" fill="#e0c33a" stroke="#8a7412"/><circle cx="618" cy="102" r="9" fill="#d94b3d" stroke="#7a1f16"/></g>
+  <text x="604" y="54" text-anchor="end" font-size="9" fill="#fff">NO</text><text x="604" y="80" text-anchor="end" font-size="9" fill="#fff">COM</text><text x="604" y="106" text-anchor="end" font-size="9" fill="#fff">NC</text>
+  <text x="535" y="20" text-anchor="middle" font-size="13" fill="#222">5V relay module</text>
+
+  <!-- relay control wires: 5V pin 2, GND pin 6, GPIO17 pin 11 -->
+  <path d="M70 185 L70 150 L410 150 L410 57 L436 57" fill="none" stroke="#d62828" stroke-width="3.5"/>
+  <path d="M106 185 L106 158 L400 158 L400 75 L436 75" fill="none" stroke="#1b1b1b" stroke-width="3.5"/>
+  <path d="M160 200 L160 166 L390 166 L390 93 L436 93" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+
+  <!-- 12V supply and the lock -->
+  <path d="M660 236 h150 v58 h-150 z" fill="#fff6c9" stroke="#d6b84a"/>
+  <path d="M790 236 l20 20 h-20 z" fill="#f1d77a"/>
+  <text x="672" y="262" font-size="15" fill="#333">12V DC power</text><text x="672" y="282" font-size="11" fill="#666">for the solenoid lock</text>
+  <rect x="770" y="40" width="150" height="80" rx="8" fill="#b9bfc6" stroke="#6f767e" stroke-width="2"/>
+  <rect x="740" y="64" width="36" height="32" rx="4" fill="#d8dde2" stroke="#6f767e"/>
+  <path d="M740 64 l-14 16 l14 16 z" fill="#d8dde2" stroke="#6f767e"/>
+  <text x="845" y="86" text-anchor="middle" font-size="12" fill="#222">12V solenoid</text><text x="845" y="102" text-anchor="middle" font-size="12" fill="#222">door lock</text>
+  <!-- + to COM, NO to lock +, lock - back to supply - -->
+  <path d="M690 236 L690 76 L627 76" fill="none" stroke="#d62828" stroke-width="3.5"/>
+  <path d="M627 50 L700 50 L700 30 L860 30 L860 40" fill="none" stroke="#d62828" stroke-width="3.5"/>
+  <path d="M890 120 L890 200 L760 200 L760 236" fill="none" stroke="#1b1b1b" stroke-width="3.5"/>
+  <text x="694" y="170" font-size="10" fill="#d62828">+12V</text><text x="896" y="170" font-size="10" fill="#1b1b1b">−</text>
+
+  <!-- breadboard with the LEDs and buzzer -->
+  <rect x="560" y="340" width="360" height="200" rx="6" fill="#f3f1ec" stroke="#c9c4b8"/>
+  <line x1="572" y1="524" x2="908" y2="524" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="900" y="518" text-anchor="end" font-size="10" fill="#1b1b1b">GND rail</text>
+  <text x="640" y="372" text-anchor="middle" font-size="11" fill="#222">Green LED</text>
+  <text x="730" y="372" text-anchor="middle" font-size="11" fill="#222">Red LED</text>
+  <text x="864" y="372" text-anchor="middle" font-size="11" fill="#222">Buzzer</text>
+  <!-- LED: anode leg through a resistor to the GPIO wire, cathode leg down to GND -->
+  <path d="M626 412 a14 14 0 0 1 28 0 v18 h-28 z" fill="#3ecf5f" stroke="#1d7a33"/>
+  <line x1="632" y1="430" x2="632" y2="452" stroke="#888" stroke-width="2"/><rect x="625" y="452" width="14" height="30" rx="3" fill="#d9b382" stroke="#8a6a3c"/>
+  <line x1="648" y1="430" x2="648" y2="524" stroke="#888" stroke-width="2"/>
+  <path d="M716 412 a14 14 0 0 1 28 0 v18 h-28 z" fill="#ef4444" stroke="#8a1f1f"/>
+  <line x1="722" y1="430" x2="722" y2="452" stroke="#888" stroke-width="2"/><rect x="715" y="452" width="14" height="30" rx="3" fill="#d9b382" stroke="#8a6a3c"/>
+  <line x1="738" y1="430" x2="738" y2="524" stroke="#888" stroke-width="2"/>
+  <text x="685" y="404" text-anchor="middle" font-size="9.5" fill="#666">220Ω</text>
+  <circle cx="838" cy="440" r="30" fill="#1f1f1f"/><circle cx="838" cy="440" r="6" fill="#444"/>
+  <text x="826" y="404" font-size="11" fill="#9333ea">+</text>
+  <line x1="850" y1="468" x2="850" y2="524" stroke="#888" stroke-width="2"/>
+  <!-- GPIO wires to the parts, and the GND rail back to pin 14 -->
+  <path d="M196 200 L196 236 L540 236 L540 500 L632 500 L632 482" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <path d="M196 185 L204 185 L204 228 L550 228 L550 492 L722 492 L722 482" fill="none" stroke="#f97316" stroke-width="3"/>
+  <path d="M178 200 L178 244 L530 244 L530 330 L824 330 L824 412" fill="none" stroke="#9333ea" stroke-width="3"/>
+  <path d="M178 185 L186 185 L186 252 L520 252 L520 524 L572 524" fill="none" stroke="#1b1b1b" stroke-width="3"/>
+
+  <!-- pin legend -->
+  <rect x="40" y="500" width="180" height="128" rx="6" fill="#f7f8fa" stroke="#d5dce3"/>
+  <text x="54" y="520" font-size="12" font-weight="bold" fill="#222">Pi pins used</text>
+  <g font-size="11" fill="#333">
+    <text x="54" y="540"><tspan fill="#d62828">■</tspan> pin 2  5V</text>
+    <text x="54" y="556"><tspan fill="#1b1b1b">■</tspan> pin 6, 14  GND</text>
+    <text x="54" y="572"><tspan fill="#2563eb">■</tspan> pin 11  GPIO17 relay</text>
+    <text x="54" y="588"><tspan fill="#16a34a">■</tspan> pin 15  GPIO22 green</text>
+    <text x="54" y="604"><tspan fill="#f97316">■</tspan> pin 16  GPIO23 red</text>
+    <text x="54" y="620"><tspan fill="#9333ea">■</tspan> pin 13  GPIO27 buzzer</text>
+  </g>
+</svg>
